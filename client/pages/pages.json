@@ -1,0 +1,13 @@
+{
+  "pages": {
+    "admin/emailSender": {
+      "path": "/admin/emailSender",
+      "extensible": true
+    }
+  },
+  "extensions": {
+    "admin/emailSender": {
+      "component": "index"
+    }
+  }
+}

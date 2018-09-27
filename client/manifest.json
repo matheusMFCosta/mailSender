@@ -1,0 +1,74 @@
+{
+  "name": "email-sender",
+  "vendor": "gocommerce",
+  "version": "0.0.1",
+  "title": "EmailSender",
+  "description": "EmailSender",
+  "mustUpdateAt": "2019-02-08",
+  "categories": [],
+  "registries": ["smartcheckout", "gocommerce"],
+  "settingsSchema": {},
+  "dependencies": {
+    "gocommerce.gc-utils": "0.x",
+    "gocommerce.styleguide": "0.x"
+  },
+  "credentialType": "absolute",
+  "builders": {
+    "graphql": "1.x",
+    "pages": "0.x",
+    "react": "2.x",
+    "node": "3.x"
+  },
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.gocommerce.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "smtp.gmail.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "209.85.144.108",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "209.85.144.108:465",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "173.194.206.109",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "173.194.206.109",
+        "path": "*",
+        "port": "465"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "173.194.206.109:465",
+        "path": "*"
+      }
+    }
+  ]
+}

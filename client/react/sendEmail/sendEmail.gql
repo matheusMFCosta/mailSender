@@ -1,0 +1,5 @@
+mutation sendEmail {
+  sendEmail {
+    status
+  }
+}

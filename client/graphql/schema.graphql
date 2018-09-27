@@ -1,0 +1,10 @@
+type Query {
+  helloWorld: String
+}
+
+type sendEmail {
+  status: String
+}
+type Mutation {
+  sendEmail: sendEmail
+}
