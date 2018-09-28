@@ -1,14 +1,3 @@
-/***CREATING ALL TABLES*/
-CREATE USER root;
--- CREATE DATABASE docker;
-
-CREATE DATABASE mybooks;
-
--- CREATE USER "foo"@"localhost" IDENTIFIED WITH mysql_native_password BY "bar";
-GRANT ALL PRIVILEGES ON DATABASE mybooks TO root;
--- GRANT ALL PRIVILEGES on mybooks.*
--- TO 'root'@'%' IDENTIFIED BY 'root'
--- WITH GRANT OPTION;
 
 CREATE TABLE EMPLOYEE (
   EmployeeId   INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
