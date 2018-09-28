@@ -1,11 +1,29 @@
-version: "2"
+version: '2'
 
 services:
+  db:
+    build: ./database
+    # command: --default-authentication-plugin=mysql_native_password
+    ports: 
+      - 3306:3306
+    networks:
+      new:
+        aliases:
+          - database 
   web:
     build: .
-    command: npm run debug
-    volumes:
-      - ./dist:/server/dist
+    links:
+      - db
+    # volumes:
+    #   - ./dist:/server/dist
+    # command: cat package.json
+    command: npm run debug 
     ports:
-      - "3000:3000"
-      - "5858:5858"
+      - '3000:3000'
+    networks:
+      - new
+    depends_on:
+      - db
+
+networks: 
+  new:

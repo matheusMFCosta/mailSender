@@ -1,4 +1,4 @@
-FROM node:8-slim
+FROM node
 
 WORKDIR /server
 
@@ -7,3 +7,4 @@ RUN npm install
 
 EXPOSE 3000
 CMD [ "npm", "start" ]
+
