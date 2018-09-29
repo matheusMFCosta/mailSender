@@ -14,8 +14,8 @@ services:
     build: .
     links:
       - db
-    # volumes:
-    #   - ./dist:/server/dist
+    volumes:
+      - ./dist:/server/dist
     # command: cat package.json
     command: npm run debug 
     ports:

@@ -1,0 +1,1 @@
+{"version":3,"file":"makeQuery.js","sourceRoot":"","sources":["../../src/database/makeQuery.ts"],"names":[],"mappings":";;AAAA,MAAM,SAAS,GAAG,KAAK,EAAE,UAAU,EAAE,KAAa,EAAE,EAAE;IACrD,OAAO,MAAM,UAAU,CAAC,KAAK,CAAC,KAAK,CAAC,CAAA;AACrC,CAAC,CAAA;AAED,kBAAe,SAAS,CAAA"}
