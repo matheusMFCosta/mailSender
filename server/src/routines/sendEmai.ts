@@ -1,30 +1,21 @@
 import InsertTable from './../database/insertTable';
 
 interface AccountData {
-	AccountId: string,
-	host: string,
-	Name: string,
-	CreationDate: string,
-	Enviroment: string,
-	Contract: string,
-	status: string
+	LogId?:number
+	EmailsCount?:number
+	CreationDate?: string
+	Emails: string[]
+	AccountId:string
+	EmailTemplate: string
 }
 
-// const AccountData: AccountData = {
-// 	AccountId: "gc_xoi8837",
-// 	host: "gocommerce.com",
-// 	Name: "gocomerce",
-// 	CreationDate: "1/1/1",
-// 	Enviroment: "gocommerce",
-// 	Contract: "gocommerce",
-// 	status: "active"
-// }
 
-const sendEmails = async (connection, accountData: AccountData) => {
-	return await InsertTable(connection, "EMAILTEMPLATE", accountData).catch((e) => {
+const sendEmail = async (connection, accountData: AccountData) => {
+	const LOGData = {...accountData,EmailsCount:accountData.Emails.length, CreationDate: `${+new Date()}`,Emails:accountData.Emails.join(",")}
+	return await InsertTable(connection, "LOG", LOGData).catch((e) => {
 		if (e.code === "ER_DUP_ENTRY")
 			return { error: "AccountId já existente" }
 	})
 }
 
-export default sendEmails
+export default sendEmail
