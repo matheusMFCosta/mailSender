@@ -10,17 +10,17 @@ var app = express()
 
 app.use(bodyParser.json())
 
-app.get('/', async function (req, res) {
-  console.log(`22`)
-  const connection = dbConnection()
-  console.log(`33`)
-  const EmailTemplate = await query(connection, "SELECT * FROM EMAILTEMPLATE")
-  const ACCOUNT = await query(connection, "SELECT * FROM ACCOUNT")
-  const LOG = await query(connection, "SELECT * FROM LOG")
-  console.log(`ACCOUNT`, ACCOUNT)
-  console.log(`EmailTemplate`, EmailTemplate)
-  console.log(`LOG`, LOG)
-  connection.end()
+app.get('/', async function (req, res) { 
+  // console.log(`22`)
+  // const connection = dbConnection()
+  // console.log(`33`)
+  // const EmailTemplate = await query(connection, "SELECT * FROM EMAILTEMPLATE")
+  // const ACCOUNT = await query(connection, "SELECT * FROM ACCOUNT")
+  // const LOG = await query(connection, "SELECT * FROM LOG")
+  // console.log(`ACCOUNT`, ACCOUNT)
+  // console.log(`EmailTemplate`, EmailTemplate)
+  // console.log(`LOG`, LOG)
+  // connection.end()
   res.send('Hello World!');
 })
 
